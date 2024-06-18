@@ -192,6 +192,7 @@ export default {
       this.search()
     },
     showPositionError(err) {
+      console.log(err)
       // TODO display some kind of popup for the user
       fetch('https://ipapi.co/json/')
         .then((response) => response.json())
