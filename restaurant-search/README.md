@@ -1,6 +1,14 @@
 # restaurant-search
 
-This template should help get you started developing with Vue 3 in Vite.
+Add `.env` file in the `restaurant-search` folder, that contains all the relevant credentials
+
+```
+VITE_API_KEY="ABC"
+VITE_APPLICATION_ID="DEF"
+VITE_INDEX_NAME="ABC"
+```
+
+
 
 ## Recommended IDE Setup
 

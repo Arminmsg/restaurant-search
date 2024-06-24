@@ -137,11 +137,11 @@ export default {
   mounted() {
     // Initialize Algolia client and helper
     // Load as env vars, make it easier to test in different envs
-    const applicationID = import.meta.env.VITE_APPLICATION_ID
-    const apiKey = import.meta.env.VITE_API_KEY
-    const indexName = import.meta.env.VITE_INDEX_NAME
-    const client = algoliasearch(applicationID, apiKey)
-    this.helper = algoliasearchHelper(client, indexName, {
+    const APPLICATION_ID = import.meta.env.VITE_APPLICATION_ID
+    const API_KEY = import.meta.env.VITE_API_KEY
+    const INDEX_NAME = import.meta.env.VITE_INDEX_NAME
+    const client = algoliasearch(APPLICATION_ID, API_KEY)
+    this.helper = algoliasearchHelper(client, INDEX_NAME, {
       facets: ['food_type', 'payment_options'],
       disjunctiveFacets: ['food_type', 'payment_options']
     })
@@ -302,7 +302,6 @@ export default {
       this.search()
     },
     toggleFilterMenu() {
-      console.log("running")
       this.isFilterMenuVisible = !this.isFilterMenuVisible
     }
   }
